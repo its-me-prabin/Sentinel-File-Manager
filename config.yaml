@@ -1,0 +1,88 @@
+##############################################################################
+# Sentinel Configuration
+# ─────────────────────
+# All user-configurable settings live here. Never edit sentinel.py directly.
+# Paths support ~ for home directory expansion.
+##############################################################################
+
+paths:
+  watched:
+    - "~/Desktop"
+    - "~/Downloads"
+  deep_storage: "~/Downloads/Deep Storage"
+  # All destination folders are relative to ~/Documents unless absolute paths are given
+
+keyword_rules:
+  # Maps a destination folder name to a list of trigger substrings (case-insensitive)
+  Finance:
+    - receipt
+    - invoice
+    - tax
+    - statement
+    - payslip
+  Work:
+    - report
+    - meeting
+    - proposal
+    - contract
+  Personal:
+    - photo
+    - holiday
+    - vacation
+
+extension_rules:
+  # Maps a destination folder name to a list of file extensions
+  Images:
+    - .jpg
+    - .jpeg
+    - .png
+    - .gif
+    - .webp
+    - .heic
+  Documents:
+    - .pdf
+    - .docx
+    - .doc
+    - .txt
+    - .odt
+  Spreadsheets:
+    - .xlsx
+    - .xls
+    - .csv
+  Video:
+    - .mp4
+    - .mov
+    - .mkv
+    - .avi
+  Audio:
+    - .mp3
+    - .wav
+    - .flac
+  Archives:
+    - .zip
+    - .tar
+    - .gz
+    - .7z
+  Code:
+    - .py
+    - .js
+    - .ts
+    - .html
+    - .css
+    - .json
+
+settings:
+  archive_after_days: 30        # Files older than this go to Deep Storage
+  retry_attempts: 3             # How many times to retry a locked file
+  retry_backoff_seconds: [5, 30, 300]  # Wait time between each retry attempt
+  temporal_scan_interval_minutes: 60  # How often the background age-sweep runs
+  log_file: "sentinel_history.jsonl"
+  log_max_bytes: 5242880        # 5 MB before log rotation
+  log_backup_count: 3
+
+gui:
+  theme: "dark"           # "dark", "light", or "system"
+  color_accent: "blue"    # "blue", "green", "dark-blue"
+  activity_feed_limit: 200  # Max rows shown in the live activity table
+  window_width: 960
+  window_height: 660

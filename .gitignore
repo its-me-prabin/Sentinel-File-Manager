@@ -1,0 +1,29 @@
+# Python environments
+venv/
+env/
+build_env/
+.env
+
+# Python compilation cache
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+
+# Packaging and Build artifacts
+build/
+dist/
+*.spec
+installer_output/
+
+# IDE / OS
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# Application Logs & User Configs
+# We don't ignore config.yaml because it's the bundled default, 
+# but we ignore the runtime logs.
+sentinel_history.jsonl
+*.log
