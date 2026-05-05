@@ -23,9 +23,14 @@ Sentinel is a robust, automated file manager that runs in the background to keep
 - **AppData Configuration**: Settings dynamically persist in `%APPDATA%\Sentinel\` on Windows, allowing user settings to survive app updates or reinstalls.
 
 ## Installation
-You can run Sentinel directly from source or compile it into a standalone Windows installer.
+You can either download the pre-compiled Windows installer directly, or run the application from source.
 
-### Run From Source
+### 📥 Direct Download (Windows Only)
+1. Go to the [installer_output](installer_output/) folder in this repository.
+2. Download `SentinelInstaller_v1.0.0.exe`.
+3. Run the installer to automatically set up the application, shortcuts, and background engines.
+
+### 💻 Run From Source
 1. Clone the repository:
    ```bash
    git clone https://github.com/its-me-prabin/Sentinel-File-Manager.git

@@ -14,7 +14,6 @@ __pycache__/
 build/
 dist/
 *.spec
-installer_output/
 
 # IDE / OS
 .vscode/
