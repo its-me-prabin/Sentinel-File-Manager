@@ -34,7 +34,7 @@ You can either download the pre-compiled Windows installer directly, or run the 
 1. Clone the repository:
    ```bash
    git clone https://github.com/its-me-prabin/Sentinel-File-Manager.git
-   cd ALL-In-One-Sentinal
+   cd Sentinel-File-Manager
    ```
 2. Install dependencies:
    ```bash
